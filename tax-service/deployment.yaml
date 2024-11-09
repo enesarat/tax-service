@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kim-tax
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: kim-tax-app
+  template:
+    metadata:
+      labels:
+        app: kim-tax-app
+    spec:
+      containers:
+      - name: kim-tax
+        image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
+        ports:
+        - containerPort: 5000
