@@ -1,5 +1,5 @@
 ---
-apiVersion: apps/v2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kim-tax
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: kim-tax
-        image: docker.io/kostiscodefresh/gitops-simple-app:v2.0
+        image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
         ports:
         - containerPort: 8080
