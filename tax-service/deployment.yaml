@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: kim-tax
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: kim-tax-app
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: kim-tax
-        image: docker.io/kostiscodefresh/gitops-simple-app:v1.0
+        image: docker.io/kostiscodefresh/gitops-simple-app:v2.0
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
